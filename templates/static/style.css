@@ -3,6 +3,7 @@ body {
     background-color: #F5F5F5;
     padding: 20px;
     color: #333;
+    margin: 40px;
 }
 
 h1 {
@@ -25,3 +26,4 @@ h1 {
 .post p {
     margin: 10px 0;
 }
+
