@@ -38,5 +38,18 @@ def add_post():
         return redirect(url_for('home'))
     return render_template('add.html')
 
+@app.route("/delete/<int:post_id>")
+def delete(post_id):
+    posts = load_posts()
+
+    for post in posts:
+        if post["id"] == post_id:
+            posts.remove(post)
+            break
+
+    save_posts(posts)
+    return redirect(url_for("home"))
+
+
 if __name__ == '__main__':
     app.run(debug=True)

@@ -7,14 +7,23 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Welcome to My Flask Blog!</h1>
-    <h1>All Blog Posts</h1>
-    {% for post in posts %}
-        <div class="post">
-            <h2>{{ post.title }}</h2>
-            <p><strong>Author:</strong> {{ post.author }}</p>
-            <p>{{ post.content }}</p>
-        </div>
-    {% endfor %}
+        <div class="container">
+        <h1>Blog Posts</h1>
+
+        <a href="{{ url_for('add_post') }}" class="button">Add New Post</a>
+
+        {% for post in posts %}
+            <div class="post">
+                <h2>{{ post.title }}</h2>
+                <p><strong>Author:</strong> {{ post.author }}</p>
+                <p>{{ post.content }}</p>
+                <form action="{{ url_for('delete', post_id=post.id) }}" method="get" style="display:inline;">
+                    <button type="submit" class="delete-button">Delete</button>
+                </form>
+            </div>
+        {% else %}
+            <p>No posts available.</p>
+        {% endfor %}
+    </div>
 </body>
 </html>

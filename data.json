@@ -1,12 +1,12 @@
 [
     {
-        "id": 1,
+        "id": 3,
         "author": "John Doe",
         "title": "First Post",
         "content": "This is my first post."
     },
     {
-        "id": 2,
+        "id": 4,
         "author": "Jane Doe",
         "title": "Second Post",
         "content": "This is another post."
@@ -14,7 +14,7 @@
     {
         "id": 3,
         "author": "amir",
-        "title": "AI",
-        "content": "learn about ai"
+        "title": "new",
+        "content": "hi"
     }
 ]
