@@ -1,6 +1,7 @@
 import json
 
 from flask import Flask, render_template, request, redirect, url_for
+from jinja2.lexer import newline_re
 
 app = Flask(__name__)
 
@@ -50,6 +51,28 @@ def delete(post_id):
     save_posts(posts)
     return redirect(url_for("home"))
 
+
+@app.route('/update/<int:post_id>', methods=['GET', 'POST'])
+def update(post_id):
+    # Load posts
+    posts = load_posts()
+    post = None
+    for p in posts:
+        if p["id"] == post_id:
+            post = p
+            break
+    if not post:
+        return "Post not found", 404
+
+    if request.method == 'POST':
+        # Update existing post
+        post["author"] = request.form['author']
+        post["title"] = request.form['title']
+        post["content"] = request.form['content']
+        save_posts(posts)
+        return redirect(url_for('home'))
+
+    return render_template('update.html', post=post)
 
 if __name__ == '__main__':
     app.run(debug=True)

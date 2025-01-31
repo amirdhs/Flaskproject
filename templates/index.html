@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-        <div class="container">
+    <div class="container">
         <h1>Blog Posts</h1>
 
         <a href="{{ url_for('add_post') }}" class="button">Add New Post</a>
@@ -17,9 +17,16 @@
                 <h2>{{ post.title }}</h2>
                 <p><strong>Author:</strong> {{ post.author }}</p>
                 <p>{{ post.content }}</p>
-                <form action="{{ url_for('delete', post_id=post.id) }}" method="get" style="display:inline;">
-                    <button type="submit" class="delete-button">Delete</button>
-                </form>
+
+                <div class="post-actions">
+                    <form action="{{ url_for('update', post_id=post.id) }}" method="get" style="display:inline;">
+                        <button type="submit" class="update-button">Update</button>
+                    </form>
+
+                    <form action="{{ url_for('delete', post_id=post.id) }}" method="post" style="display:inline;">
+                        <button type="submit" class="delete-button">Delete</button>
+                    </form>
+                </div>
             </div>
         {% else %}
             <p>No posts available.</p>

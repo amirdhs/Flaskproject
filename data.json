@@ -1,20 +1,20 @@
 [
     {
-        "id": 3,
-        "author": "John Doe",
-        "title": "First Post",
-        "content": "This is my first post."
-    },
-    {
         "id": 4,
         "author": "Jane Doe",
         "title": "Second Post",
         "content": "This is another post."
     },
     {
+        "id": 5,
+        "author": "amir ",
+        "title": "new post",
+        "content": "this post updated\r\n"
+    },
+    {
         "id": 3,
-        "author": "amir",
-        "title": "new",
-        "content": "hi"
+        "author": "new post",
+        "title": "new post ",
+        "content": "this new post added"
     }
 ]
