@@ -1,29 +1,129 @@
+/* General styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #F5F5F5;
-    padding: 20px;
-    color: #333;
-    margin: 40px;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    margin: 10px;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 h1 {
+    color: #333;
     text-align: center;
-    color: #4F4F4F;
+    margin-bottom: 30px;
 }
 
+/* Add New Post button */
+.button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Post styles */
 .post {
-    background-color: #FFF;
-    border: 1px solid #DDD;
+    background-color: white;
+    border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .post h2 {
+    color: #444;
     margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .post p {
     margin: 10px 0;
+    color: #666;
 }
 
+.post p strong {
+    color: #444;
+}
+
+/* Post actions */
+.post-actions {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.post-actions form {
+    margin-right: 10px;
+}
+
+/* Button styles */
+.update-button, .delete-button, .like-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.update-button {
+    background-color: #28a745;
+    color: white;
+}
+
+.update-button:hover {
+    background-color: #218838;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+.like-button {
+    background-color: #6c757d;
+    color: white;
+}
+
+.like-button:hover {
+    background-color: #5a6268;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .post {
+        padding: 15px;
+    }
+
+    .post-actions form {
+        margin-bottom: 10px;
+    }
+
+    .update-button, .delete-button, .like-button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}

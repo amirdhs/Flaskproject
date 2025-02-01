@@ -1,20 +1,16 @@
 [
     {
-        "id": 4,
-        "author": "Jane Doe",
-        "title": "Second Post",
-        "content": "This is another post."
-    },
-    {
-        "id": 5,
-        "author": "amir ",
-        "title": "new post",
-        "content": "this post updated\r\n"
+        "id": 1,
+        "author": "Amir",
+        "title": "New Post",
+        "content": "This post has been updated.",
+        "likes": 70
     },
     {
         "id": 3,
-        "author": "new post",
-        "title": "new post ",
-        "content": "this new post added"
+        "author": "Jane Doe",
+        "title": "My First Blog",
+        "content": "This is my first blog post!",
+        "likes": 40
     }
 ]

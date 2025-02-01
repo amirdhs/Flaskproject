@@ -39,7 +39,7 @@ def add_post():
         return redirect(url_for('home'))
     return render_template('add.html')
 
-@app.route("/delete/<int:post_id>")
+@app.route("/delete/<int:post_id>", methods=['POST'])
 def delete(post_id):
     posts = load_posts()
 
@@ -69,10 +69,26 @@ def update(post_id):
         post["author"] = request.form['author']
         post["title"] = request.form['title']
         post["content"] = request.form['content']
+
         save_posts(posts)
         return redirect(url_for('home'))
 
     return render_template('update.html', post=post)
+
+@app.route('/like/<int:post_id>', methods=['POST'])
+def like(post_id):
+    # Load posts
+    posts = load_posts()
+
+    for post in posts:
+        if post["id"] == post_id:
+
+            post["likes"] = post.get("likes", 0) + 1
+            save_posts(posts)
+            return redirect(url_for("home"))
+
+    # If the post is not found, return a 404 error
+    return "Post not found", 404
 
 if __name__ == '__main__':
     app.run(debug=True)
