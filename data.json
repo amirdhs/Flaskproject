@@ -8,16 +8,30 @@
     },
     {
         "id": 2,
-        "author": "new post",
-        "title": "for id",
-        "content": "hello",
-        "likes": 5
+        "author": "Sarah",
+        "title": "The Beauty of Flask",
+        "content": "Flask is a lightweight yet powerful web framework for Python.",
+        "likes": 120
+    },
+    {
+        "id": 3,
+        "author": "John",
+        "title": "Mastering SQL",
+        "content": "Understanding SQL is crucial for database management and backend development.",
+        "likes": 95
+    },
+    {
+        "id": 4,
+        "author": "Lisa",
+        "title": "CSS Tips and Tricks",
+        "content": "Here are some advanced CSS techniques to improve your styling.",
+        "likes": 78
     },
     {
         "id": 5,
-        "author": "amir",
-        "title": "for check?",
-        "content": "check for new id ",
-        "likes": 5
+        "author": "Michael",
+        "title": "Django vs Flask",
+        "content": "Which Python web framework should you choose? Let's compare Flask and Django.",
+        "likes": 110
     }
 ]
