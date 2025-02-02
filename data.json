@@ -4,13 +4,20 @@
         "author": "Amir",
         "title": "New Post",
         "content": "This post has been updated.",
-        "likes": 70
+        "likes": 83
     },
     {
-        "id": 3,
-        "author": "Jane Doe",
-        "title": "My First Blog",
-        "content": "This is my first blog post!",
-        "likes": 40
+        "id": 2,
+        "author": "new post",
+        "title": "for id",
+        "content": "hello",
+        "likes": 5
+    },
+    {
+        "id": 5,
+        "author": "amir",
+        "title": "for check?",
+        "content": "check for new id ",
+        "likes": 5
     }
 ]

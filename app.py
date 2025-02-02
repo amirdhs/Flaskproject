@@ -23,13 +23,13 @@ def home():
     posts = load_posts()
     return render_template('index.html', posts=posts)
 
-
 @app.route('/add', methods=['GET', 'POST'])
 def add_post():
     if request.method == 'POST':
         posts = load_posts()
+        new_id = max((post["id"] for post in posts), default=0) + 1  # Ensure a unique ID
         new_post = {
-            "id": len(posts) + 1,
+            "id": new_id,
             "author": request.form['author'],
             "title": request.form['title'],
             "content": request.form['content']
@@ -38,6 +38,7 @@ def add_post():
         save_posts(posts)
         return redirect(url_for('home'))
     return render_template('add.html')
+
 
 @app.route("/delete/<int:post_id>", methods=['POST'])
 def delete(post_id):
